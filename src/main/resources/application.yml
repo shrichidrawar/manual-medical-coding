@@ -1,0 +1,6 @@
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/manualcode
+##      client: mongodb+srv://neutrino_paysheet_user:Cu0XtGhRLEevMFU5@cluster-intellidocs.7j7qf.mongodb.net/neutrino_paysheet
+#      database: manualcode
