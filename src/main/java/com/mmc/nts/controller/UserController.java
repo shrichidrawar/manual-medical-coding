@@ -10,13 +10,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.mmc.nts.entity.User;
 import com.mmc.nts.model.Response;
 import com.mmc.nts.model.UserSearchCriteria;
-import com.mmc.nts.repository.UserRepository;
 import com.mmc.nts.service.UserService;
-
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 
@@ -27,16 +24,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-//	@PostMapping("/create")
-//	public ResponseEntity<Response> registerUser(@Valid @RequestBody User user) {
-//
-//		if (userRepository.findByEmail(user.getEmail()).isPresent()) {
-//			return ResponseEntity.badRequest().body("Email address is already taken");
-//		}
-//		userRepository.save(user);
-//
-//		return ResponseEntity.ok("User registered successfully");
-//	}
 	@PostMapping()
 	public ResponseEntity<Response> createUser(@Valid @RequestBody User user) {
 		return userService.createUser(user);
