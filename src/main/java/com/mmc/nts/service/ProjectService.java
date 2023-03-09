@@ -16,7 +16,6 @@ public interface ProjectService {
 	
 	ResponseEntity<Response> createProject(Project project);
 	
-
 	ResponseEntity<Response> updateProject(Project project);
 
 	ResponseEntity<Response> updateStatus(String projectID, String status);

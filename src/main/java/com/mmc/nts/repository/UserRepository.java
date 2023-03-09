@@ -32,6 +32,4 @@ public interface UserRepository extends MongoRepository<User, String>{
 	@Query(value="{ 'email' : ?0,'status':'disabled'}", fields="{ 'status' : 1}")
 	public Optional<User> findByStatusByEmail(String email);
 
-
-
 }
